@@ -24,12 +24,19 @@ public class Problema04 {
         double resultado = 0;
         int numerador = 1;
         String mensaje = "";
-        
+        int contadorSigno = 1;
+        String signo="";
         
         while (contador <= 15 ) {
+            if (contadorSigno % 2==0){
+              signo = "-";
+            }else{
+                signo = "+";
+            }
             resultado = (contador+1);
-            mensaje = String.format("%s-%d/%.0f+ ",mensaje,numerador,resultado);
+            mensaje = String.format("%s%s%d/%.0f ",mensaje,signo,numerador,resultado);
             contador = contador +2;
+            contadorSigno = contadorSigno +1;
         }
     System.out.printf("%s",mensaje);
     }
