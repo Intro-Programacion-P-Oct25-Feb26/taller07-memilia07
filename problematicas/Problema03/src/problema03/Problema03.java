@@ -22,8 +22,8 @@ public class Problema03 {
 
         double contador = 1;
         double resultado = 0;
-
         String mensaje = "";
+        
         while (contador < 7) {
 
             resultado = Math.pow(contador, 2) +1;
