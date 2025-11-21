@@ -25,20 +25,33 @@ public class Problema04 {
         int numerador = 1;
         String mensaje = "";
         int contadorSigno = 1;
+        double resultadoFinal = 0;
+                
         String signo="";
         
         while (contador <= 15 ) {
+            
+             resultado = (contador+1);
+            
             if (contadorSigno % 2==0){
               signo = "-";
+              resultado = -(resultado);
             }else{
                 signo = "+";
+                resultado = +(resultado);
             }
-            resultado = (contador+1);
+            
+           
             mensaje = String.format("%s%s%d/%.0f ",mensaje,signo,numerador,resultado);
-            contador = contador +2;
+            
+            
+        
+            resultadoFinal = resultadoFinal + numerador/resultado;
+            
+            contador = contador + 2;
             contadorSigno = contadorSigno +1;
         }
-    System.out.printf("%s",mensaje);
+    System.out.printf("%s\nRESULTADO: %.4f",mensaje,resultadoFinal);
     }
 
 }
